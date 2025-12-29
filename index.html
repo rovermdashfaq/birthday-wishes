@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamisha Lamiya - দ্য আলটিমেট সলিড লাক্সারি জন্মদিন</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Hind+Siliguri:wght@300;400;500;600&family=Great+Vibes&family=Dancing+Script:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-analytics-compat.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --solid-gold: #FFD700;
+            --solid-burgundy: #800020;
+            --solid-navy: #000080;
+            --solid-emerald: #046307;
+            --solid-ivory: #FFFFF0;
+            --solid-charcoal: #36454F;
+            --solid-ruby: #E0115F;
+            --solid-sapphire: #082567;
+            --solid-platinum: #E5E4E2;
+            --solid-midnight: #0C0C1E;
+            --solid-cream: #F5F5DC;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--solid-midnight);
+            color: var(--solid-platinum);
+            overflow-x: hidden;
+            line-height: 1.7;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Solid Luxury Header */
+        .solid-header {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--solid-navy);
+            overflow: hidden;
+        }
+
+        .solid-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, 
+                transparent 0%, 
+                rgba(255, 215, 0, 0.1) 50%, 
+                transparent 100%);
+            animation: solidShine 8s linear infinite;
+        }
+
+        @keyframes solidShine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 1200px;
+            padding: 60px;
+            background-color: var(--solid-charcoal);
+            border-radius: 40px;
+            border: 8px solid var(--solid-gold);
+            box-shadow: 
+                0 40px 80px rgba(0, 0, 0, 0.6),
+                inset 0 0 60px rgba(255, 215, 0, 0.1),
+                0 0 40px rgba(255, 215, 0, 0.3);
+            animation: solidFloat 6s ease-in-out infinite;
+        }
+
+        @keyframes solidFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .main-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 8rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+            color: var(--solid-gold);
+            letter-spacing: 5px;
+            text-shadow: 
+                0 0 30px rgba(255, 215, 0, 0.5),
+                0 5px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .subtitle {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 500;
+            margin: 40px 0;
+            color: var(--solid-cream);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .birthday-date {
+            font-size: 3rem;
+            font-weight: 600;
+            display: inline-block;
+            padding: 25px 60px;
+            background-color: var(--solid-burgundy);
+            border: 5px solid var(--solid-gold);
+            border-radius: 100px;
+            color: var(--solid-gold);
+            letter-spacing: 4px;
+            margin-top: 40px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            box-shadow: 
+                0 0 40px rgba(128, 0, 32, 0.6),
+                inset 0 0 20px rgba(255, 215, 0, 0.2);
+        }
+
+        .birthday-date:hover {
+            transform: scale(1.1);
+            box-shadow: 
+                0 0 60px rgba(128, 0, 32, 0.8),
+                inset 0 0 30px rgba(255, 215, 0, 0.3);
+            background-color: var(--solid-ruby);
+        }
+
+        /* Solid Portrait Section */
+        .solid-portrait-section {
+            padding: 100px 0;
+            background-color: var(--solid-charcoal);
+            position: relative;
+        }
+
+        .solid-portrait-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            display: flex;
+            gap: 80px;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .solid-frame {
+            width: 500px;
+            height: 700px;
+            position: relative;
+            background-color: var(--solid-navy);
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 
+                0 60px 120px rgba(0, 0, 0, 0.7),
+                0 0 0 20px var(--solid-gold),
+                0 0 0 25px var(--solid-burgundy),
+                0 0 0 30px var(--solid-gold);
+            transform: perspective(1200px) rotateX(5deg) rotateY(-5deg);
+            transition: all 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .solid-frame:hover {
+            transform: perspective(1200px) rotateX(0deg) rotateY(0deg) scale(1.05);
+        }
+
+        .portrait-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 1.5s ease;
+            filter: brightness(1.1) contrast(1.1);
+        }
+
+        .solid-frame:hover .portrait-image {
+            transform: scale(1.1);
+        }
+
+        .frame-corner {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            z-index: 20;
+        }
+
+        .corner-1 { top: 20px; left: 20px; border-top: 8px solid var(--solid-gold); border-left: 8px solid var(--solid-gold); }
+        .corner-2 { top: 20px; right: 20px; border-top: 8px solid var(--solid-gold); border-right: 8px solid var(--solid-gold); }
+        .corner-3 { bottom: 20px; left: 20px; border-bottom: 8px solid var(--solid-gold); border-left: 8px solid var(--solid-gold); }
+        .corner-4 { bottom: 20px; right: 20px; border-bottom: 8px solid var(--solid-gold); border-right: 8px solid var(--solid-gold); }
+
+        /* Solid Card Section */
+        .solid-card-container {
+            width: 500px;
+            height: 700px;
+            position: relative;
+        }
+
+        .solid-card {
+            width: 100%;
+            height: 100%;
+            background-color: var(--solid-burgundy);
+            border-radius: 30px;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 
+                0 50px 100px rgba(0, 0, 0, 0.6),
+                0 0 0 20px var(--solid-gold),
+                0 0 0 25px var(--solid-navy);
+            border: 5px solid var(--solid-gold);
+            position: relative;
+            overflow: hidden;
+            transform: perspective(1000px) rotateX(5deg) rotateY(5deg);
+            transition: transform 1s ease;
+        }
+
+        .solid-card:hover {
+            transform: perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1.05);
+        }
+
+        .card-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 4rem;
+            color: var(--solid-gold);
+            margin-bottom: 30px;
+            text-align: center;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .card-image-container {
+            width: 250px;
+            height: 250px;
+            margin: 30px 0;
+            border: 8px solid var(--solid-gold);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 40px rgba(255, 215, 0, 0.4);
+            position: relative;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-date {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            color: var(--solid-gold);
+            margin-top: 30px;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+        }
+
+        /* Solid Message Section */
+        .solid-message-section {
+            padding: 120px 0;
+            background-color: var(--solid-burgundy);
+            position: relative;
+        }
+
+        .solid-message-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 70px;
+            background-color: var(--solid-charcoal);
+            border-radius: 40px;
+            border: 8px solid var(--solid-gold);
+            box-shadow: 
+                0 50px 100px rgba(0, 0, 0, 0.6),
+                inset 0 0 80px rgba(255, 215, 0, 0.1),
+                0 0 40px rgba(255, 215, 0, 0.3);
+            position: relative;
+        }
+
+        .message-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.7rem;
+            color: var(--solid-gold);
+            margin-bottom: 60px;
+            position: relative;
+            padding-bottom: 30px;
+            text-align: center;
+        }
+
+        .message-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 6px;
+            background-color: var(--solid-gold);
+            border-radius: 3px;
+        }
+
+        .message-text {
+            font-size: 0.8rem;
+            line-height: 2;
+            color: var(--solid-cream);
+            margin-bottom: 40px;
+            text-align: justify;
+            font-weight: 400;
+        }
+
+        .highlight {
+            background-color: var(--solid-gold);
+            color: var(--solid-burgundy);
+            padding: 1px 8px;
+            border-radius: 8px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .signature {
+            text-align: right;
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.5rem;
+            color: var(--solid-gold);
+            margin-top: 80px;
+            padding-top: 30px;
+            border-top: 3px solid var(--solid-gold);
+            position: relative;
+        }
+
+        .signature::before {
+            content: '💫';
+            position: absolute;
+            top: -15px;
+            right: 120px;
+            font-size: 2rem;
+            color: var(--solid-gold);
+            animation: heartbeat 1.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            15% { transform: scale(1.4); }
+            30% { transform: scale(1.1); }
+            45% { transform: scale(1.5); }
+            60% { transform: scale(1); }
+        }
+
+        /* Solid Wish Section */
+        .solid-wish-section {
+            padding: 120px 0;
+            background-color: var(--solid-navy);
+            position: relative;
+        }
+
+        .solid-wish-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            color: var(--solid-gold);
+            text-align: center;
+            margin-bottom: 80px;
+            position: relative;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+        }
+
+        .solid-wish-title::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 6px;
+            background-color: var(--solid-gold);
+            border-radius: 3px;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .solid-wish-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 70px;
+            background-color: var(--solid-charcoal);
+            border-radius: 40px;
+            border: 8px solid var(--solid-gold);
+            box-shadow: 
+                0 60px 120px rgba(0, 0, 0, 0.7),
+                inset 0 0 80px rgba(255, 215, 0, 0.1),
+                0 0 40px rgba(255, 215, 0, 0.4);
+            position: relative;
+        }
+
+        .wish-form-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 25px 30px;
+            background-color: var(--solid-navy);
+            border: 4px solid var(--solid-gold);
+            border-radius: 20px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.6rem;
+            color: var(--solid-cream);
+            transition: all 0.4s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--solid-gold);
+            box-shadow: 
+                0 0 0 4px rgba(255, 215, 0, 0.3),
+                0 0 30px rgba(255, 215, 0, 0.4);
+            background-color: var(--solid-sapphire);
+        }
+
+        .form-input::placeholder {
+            color: rgba(245, 245, 220, 0.6);
+        }
+
+        .wish-input {
+            min-height: 250px;
+            resize: vertical;
+            grid-column: span 2;
+        }
+
+        .solid-button {
+            background-color: var(--solid-gold);
+            color: var(--solid-burgundy);
+            border: none;
+            padding: 3px 8px;
+            font-size: 1.5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            border-radius: 80px;
+            cursor: pointer;
+            transition: all 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            margin: 60px auto 0;
+            letter-spacing: 3px;
+            box-shadow: 
+                0 30px 60px rgba(255, 215, 0, 0.5),
+                0 0 0 5px var(--solid-burgundy);
+            position: center;
+            overflow: hidden;
+            text-transform: uppercase;
+        }
+
+        .solid-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                transparent, 
+                rgba(255, 255, 255, 0.4), 
+                transparent);
+            transition: 0.6s;
+        }
+
+        .solid-button:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 
+                0 50px 100px rgba(255, 215, 0, 0.7),
+                0 0 0 8px var(--solid-burgundy);
+            letter-spacing: 5px;
+            background-color: #FFE55C;
+        }
+
+        .solid-button:hover::before {
+            left: 100%;
+        }
+
+        .solid-button:active {
+            transform: translateY(-5px) scale(1.02);
+        }
+
+        /* Solid Wishes Display */
+        .solid-wishes-display {
+            max-width: 1400px;
+            margin: 150px auto 0;
+            padding: 0 50px;
+        }
+
+        .wishes-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--solid-gold);
+            text-align: center;
+            margin-bottom: 100px;
+            position: relative;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+        }
+
+        .wishes-title::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 6px;
+            background-color: var(--solid-gold);
+            border-radius: 3px;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .wishes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+            gap: 50px;
+        }
+
+        .wish-card {
+            background-color: var(--solid-charcoal);
+            border-radius: 30px;
+            padding: 50px;
+            margin-bottom: 20px;
+            border: 5px solid var(--solid-gold);
+            box-shadow: 
+                0 30px 60px rgba(0, 0, 0, 0.7),
+                inset 0 0 40px rgba(255, 215, 0, 0.1);
+            transition: all 0.5s ease;
+            animation: cardAppear 0.8s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes cardAppear {
+            from { 
+                opacity: 0; 
+                transform: translateY(50px) scale(0.9); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0) scale(1); 
+            }
+        }
+
+        .wish-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background-color: var(--solid-gold);
+        }
+
+        .wish-card:hover {
+            transform: translateY(-20px) scale(1.03);
+            box-shadow: 
+                0 60px 120px rgba(0, 0, 0, 0.8),
+                0 0 0 5px var(--solid-gold),
+                inset 0 0 60px rgba(255, 215, 0, 0.2);
+        }
+
+        .wish-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 35px;
+            padding-bottom: 25px;
+            border-bottom: 3px solid var(--solid-gold);
+            position: relative;
+        }
+
+        .wish-sender {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--solid-gold);
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .wish-sender i {
+            font-size: 1.2rem;
+            color: var(--solid-gold);
+        }
+
+        .wish-time {
+            font-size: 0.6rem;
+            color: var(--solid-cream);
+            font-family: 'Hind Siliguri', sans-serif;
+            font-weight: 400;
+        }
+
+        .wish-text {
+            font-size: 1.0rem;
+            line-height: 1.4;
+            color: var(--solid-cream);
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 400;
+            position: relative;
+            padding-left: 20px;
+            border-left: 4px solid var(--solid-gold);
+        }
+
+        /* Solid Footer */
+        .solid-footer {
+            padding: 120px 0 60px;
+            background-color: var(--solid-burgundy);
+            border-top: 8px solid var(--solid-gold);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 5rem;
+            color: var(--solid-gold);
+            margin-bottom: 40px;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+        }
+
+        .footer-subtitle {
+            font-size: 1.8rem;
+            color: var(--solid-cream);
+            margin-bottom: 60px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .footer-signoff {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            color: var(--solid-gold);
+            margin: 80px 0;
+            font-style: italic;
+            position: relative;
+            display: inline-block;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+        }
+
+        .footer-signoff::before,
+        .footer-signoff::after {
+            content: '✨';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--solid-gold);
+            font-size: 2.5rem;
+            animation: sparkle 2s ease-in-out infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0.5; transform: translateY(-50%) scale(1); }
+            50% { opacity: 1; transform: translateY(-50%) scale(1.5); }
+        }
+
+        .footer-signoff::before {
+            left: -60px;
+        }
+
+        .footer-signoff::after {
+            right: -60px;
+        }
+
+        .copyright {
+            margin-top: 80px;
+            padding-top: 50px;
+            border-top: 3px solid var(--solid-gold);
+            color: var(--solid-cream);
+            font-size: 1.1rem;
+            font-family: 'Hind Siliguri', sans-serif;
+            letter-spacing: 2px;
+            font-weight: 400;
+        }
+
+        /* Loading */
+        .solid-loading {
+            display: none;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .solid-spinner {
+            width: 80px;
+            height: 80px;
+            border: 8px solid rgba(255, 215, 0, 0.1);
+            border-top: 8px solid var(--solid-gold);
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            animation: solidSpin 1.5s linear infinite;
+        }
+
+        @keyframes solidSpin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Toast */
+        .solid-toast {
+            position: fixed;
+            bottom: 80px;
+            right: 80px;
+            padding: 30px 45px;
+            background-color: var(--solid-gold);
+            color: var(--solid-burgundy);
+            border-radius: 25px;
+            box-shadow: 
+                0 40px 80px rgba(0, 0, 0, 0.7),
+                0 0 0 5px var(--solid-burgundy);
+            z-index: 10000;
+            transform: translateX(100%);
+            opacity: 0;
+            transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            font-weight: 700;
+            max-width: 500px;
+            font-size: 1.3rem;
+            font-family: 'Montserrat', sans-serif;
+            border: 3px solid var(--solid-burgundy);
+        }
+
+        .solid-toast.show {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        /* Responsive */
+        @media (max-width: 1600px) {
+            .main-title {
+                font-size: 7rem;
+            }
+            
+            .solid-portrait-container {
+                flex-direction: column;
+                gap: 100px;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .main-title {
+                font-size: 6rem;
+            }
+            
+            .subtitle {
+                font-size: 2.3rem;
+            }
+            
+            .solid-frame {
+                width: 450px;
+                height: 650px;
+            }
+            
+            .solid-card-container {
+                width: 450px;
+                height: 650px;
+            }
+            
+            .wishes-grid {
+                grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            }
+        }
+
+        @media (max-width: 992px) {
+            .container {
+                padding: 0 30px;
+            }
+            
+            .main-title {
+                font-size: 5rem;
+                letter-spacing: 4px;
+            }
+            
+            .header-content {
+                padding: 50px 30px;
+            }
+            
+            .subtitle {
+                font-size: 2rem;
+                margin: 30px 0;
+            }
+            
+            .birthday-date {
+                font-size: 2.2rem;
+                padding: 20px 40px;
+            }
+            
+            .solid-frame {
+                width: 400px;
+                height: 600px;
+            }
+            
+            .solid-card-container {
+                width: 400px;
+                height: 600px;
+            }
+            
+            .solid-card {
+                padding: 40px;
+            }
+            
+            .wish-form-group {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+            
+            .wish-input {
+                grid-column: span 1;
+            }
+            
+            .wishes-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+            
+            .main-title {
+                font-size: 4rem;
+                letter-spacing: 3px;
+            }
+            
+            .header-content {
+                padding: 40px 20px;
+                border-radius: 30px;
+                border-width: 6px;
+            }
+            
+            .subtitle {
+                font-size: 1.6rem;
+                margin: 20px 0;
+            }
+            
+            .birthday-date {
+                font-size: 1.2rem;
+                padding: 15px 30px;
+            }
+            
+            .solid-frame {
+                width: 100%;
+                height: 500px;
+                box-shadow: 
+                    0 40px 80px rgba(0, 0, 0, 0.7),
+                    0 0 0 15px var(--solid-gold),
+                    0 0 0 20px var(--solid-burgundy),
+                    0 0 0 25px var(--solid-gold);
+            }
+            
+            .solid-card-container {
+                width: 100%;
+                height: 500px;
+            }
+            
+            .solid-card {
+                padding: 30px;
+            }
+            
+            .solid-wish-title {
+                font-size: 3.5rem;
+            }
+            
+            .solid-wish-container {
+                padding: 40px 30px;
+                border-width: 6px;
+            }
+            
+            .solid-toast {
+                left: 20px;
+                right: 20px;
+                bottom: 20px;
+                max-width: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-title {
+                font-size: 3rem;
+            }
+            
+            .header-content {
+                padding: 30px 15px;
+            }
+            
+            .subtitle {
+                font-size: 1.4rem;
+            }
+            
+            .solid-frame {
+                height: 400px;
+            }
+            
+            .solid-card-container {
+                height: 450px;
+            }
+            
+            .card-title {
+                font-size: 3rem;
+            }
+            
+            .card-image-container {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Solid Toast -->
+    <div id="solidToast" class="solid-toast"></div>
+    
+    <!-- Solid Luxury Header -->
+    <header class="solid-header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="main-title">Lamisha Lamiya<br>Apu</h1>
+                <div class="subtitle">মহাবিশ্বের সবচেয়ে মূল্যবান রত্নের জন্মদিন</div>
+                <div class="birthday-date">30 December</div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Solid Portrait Section -->
+    <section class="solid-portrait-section">
+        <div class="container">
+            <div class="solid-portrait-container">
+                <div class="solid-frame">
+                    <div class="frame-corner corner-1"></div>
+                    <div class="frame-corner corner-2"></div>
+                    <img src="https://i.ibb.co/BVhwHprY/1000000761.jpg" alt="Lamisha Lamiya" class="portrait-image">
+                    <div class="frame-corner corner-3"></div>
+                    <div class="frame-corner corner-4"></div>
+                </div>
+                
+                <div class="solid-card-container">
+                    <div class="solid-card">
+                        <h3 class="card-title">Lamu Apu 🙃</h3>
+                        <div class="card-image-container">
+                            <img src="https://i.ibb.co/xSv7Nqtk/1000000762.png" alt="Birthday Card" class="card-image">
+                        </div>
+                        <p style="font-size: 1.5rem; color: var(--solid-cream); text-align: center; margin: 20px 0;">
+                            আপনার জন্য অপার শুভেচ্ছা ও ভালোবাসা
+                        </p>
+                        <div class="card-date">৩০ ডিসেম্বর</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Solid Message Section -->
+    <section class="solid-message-section">
+        <div class="container">
+            <div class="solid-message-container">
+                <h2 class="message-title">প্রিয় Lamu Apu</h2>
+                <p class="message-text">
+                    আজ <span class="highlight">৩০ ডিসেম্বর</span> - পৃথিবীতে একটি অনন্য সৌন্দর্যের আবির্ভাবের দিন। আপনার জন্মদিন উপলক্ষ্যে, হৃদয়ের গভীরতম স্থান থেকে জানাই অফুরন্ত শুভেচ্ছা ও ভালোবাসা।
+                </p>
+                <p class="message-text">
+                    আপনি শুধু একজন ব্যক্তি নন, আপনি একটি জীবন্ত কবিতা, একটি অনুপ্রেরণার উৎস। আপনার উপস্থিতি আমাদের জীবনে <span class="highlight">আলো ও আনন্দের</span> বার্তা বয়ে আনে। আপনার ব্যক্তিত্বের দ্যুতি চারপাশের সকলকে আলোকিত করে।
+                </p>
+                <p class="message-text">
+                    আপনার জীবনপথ যেন রঙ্গিন ফুলের সুগন্ধে ভরে উঠুক, প্রতিটি পদক্ষেপ সাফল্যের সিঁড়ি বেয়ে উঠুক। আপনার সকল স্বপ্ন পূর্ণতা পাক, আপনি সর্বদা সুস্থ, সুখী ও প্রফুল্ল থাকুন।
+                </p>
+                <p class="message-text">
+                    আপনার স্নেহ, নির্দেশনা ও অপার ভালোবাসা আমার জীবনের অমূল্য সম্পদ। আজকের এই বিশেষ দিনে আপনার জন্য হাজারো প্রার্থনা - আপনি যেন চিরকাল এই সুন্দর মানুষটি হিসেবে থাকেন।
+                </p>
+                <div class="signature" style="text-align: center;font-size: 20px;">অনেক অনেক ভালোবাসা,<br>আপনারই ছোট</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Solid Wish Section -->
+    <section class="solid-wish-section">
+        <div class="container">
+            <h2 class="solid-wish-title">আপনার জন্য শুভেচ্ছা</h2>
+            <div class="solid-wish-container">
+                <div class="wish-form-group">
+                    <input type="text" class="form-input" id="senderName" placeholder="আপনার নাম *" required>
+                    <input type="text" class="form-input" id="senderTitle" placeholder="আপনার সম্পর্ক (ঐচ্ছিক)">
+                    <textarea class="form-input wish-input" id="wishInput" placeholder="আপনার শুভেচ্ছা বার্তা লিখুন... *" required></textarea>
+                </div>
+                
+                <div class="solid-loading" id="solidLoading">
+                    <div class="solid-spinner"></div>
+                    <p style="color: var(--solid-gold); font-size: 1.4rem;">আপনার শুভেচ্ছা সংরক্ষণ করা হচ্ছে...</p>
+                </div>
+                
+                <button class="solid-button" id="solidBtn">
+                    <i class="fas fa-paper-plane"></i>Send Wishes
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Solid Wishes Display -->
+    <div class="solid-wishes-display">
+        <h3 class="wishes-title">সকলের শুভেচ্ছা</h3>
+        <div class="wishes-grid" id="wishList">
+            <!-- Wishes will be loaded here -->
+            <div class="wish-card">
+                <div class="wish-header">
+                    <div class="wish-sender">
+                        <i class="fas fa-crown"></i>
+                        আপনার ছোট
+                    </div>
+                    <div class="wish-time">আজ, ১০:৩০ AM</div>
+                </div>
+                <div class="wish-text">প্রিয় Lamisha Lamiya, আপনার জন্মদিনে মহাবিশ্বের সমস্ত সুখ আপনার জন্য কামনা করি। আপনি সত্যিই অসাধারণ!</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Solid Footer -->
+    <footer class="solid-footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3 class="footer-title">Lamisha Lamiya<br>Apu</h3>
+                <p class="footer-subtitle">Please accept my warmest and most respectful wishes on your birthday.May you be blessed with excellent health and happiness in the coming year</p>
+                <p class="footer-signoff">Yours Chuto🙃</p>
+                <div class="copyright">
+                    © ২০২৫ • Lamisha Lamiya-এর জন্য বিশেষ জন্মদিনের শুভেচ্ছা • সকল অধিকার সংরক্ষিত
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Firebase Configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyBLG5D188FoAnAk6ZXXXVLDxaDpnLyBGwQ",
+            authDomain: "happy-birthday-project01.firebasestorage.app",
+            projectId: "happy-birthday-project01",
+            storageBucket: "happy-birthday-project01.firebasestorage.app",
+            messagingSenderId: "650443124990",
+            appId: "1:650443124990:web:c787f96cac84de1846f5af",
+            measurementId: "G-KGG0RSSEH7"
+        };
+
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        const analytics = firebase.analytics();
+
+        // Log an event to Firebase Analytics
+        analytics.logEvent('solid_birthday_website_visited', {
+            name: 'Lamisha Lamiya',
+            birthday: 'December 30'
+        });
+
+        // DOM Elements
+        const solidBtn = document.getElementById('solidBtn');
+        const wishInput = document.getElementById('wishInput');
+        const senderName = document.getElementById('senderName');
+        const senderTitle = document.getElementById('senderTitle');
+        const wishList = document.getElementById('wishList');
+        const solidLoading = document.getElementById('solidLoading');
+        const solidToast = document.getElementById('solidToast');
+
+        // Show toast notification
+        function showToast(message, type = 'success') {
+            solidToast.textContent = message;
+            
+            if (type === 'success') {
+                solidToast.style.backgroundColor = 'var(--solid-gold)';
+                solidToast.style.color = 'var(--solid-burgundy)';
+            } else {
+                solidToast.style.backgroundColor = 'var(--solid-ruby)';
+                solidToast.style.color = 'var(--solid-cream)';
+            }
+            
+            solidToast.classList.add('show');
+            
+            setTimeout(() => {
+                solidToast.classList.remove('show');
+            }, 4000);
+        }
+
+        // Format timestamp
+        function formatTimestamp(timestamp) {
+            if (!timestamp) return 'এইমাত্র';
+            
+            const date = timestamp.toDate();
+            const now = new Date();
+            const diffMs = now - date;
+            const diffMins = Math.floor(diffMs / 60000);
+            const diffHours = Math.floor(diffMs / 3600000);
+            const diffDays = Math.floor(diffMs / 86400000);
+            
+            if (diffMins < 1) return 'এইমাত্র';
+            if (diffMins < 60) return `${diffMins} মিনিট আগে`;
+            if (diffHours < 24) return `${diffHours} ঘন্টা আগে`;
+            if (diffDays < 7) return `${diffDays} দিন আগে`;
+            
+            return date.toLocaleDateString('bn-BD', {
+                day: 'numeric',
+                month: 'long',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+        }
+
+        // Create golden particle effect
+        function createGoldParticle() {
+            const particle = document.createElement('div');
+            particle.style.position = 'fixed';
+            particle.style.width = Math.random() * 15 + 5 + 'px';
+            particle.style.height = particle.style.width;
+            particle.style.backgroundColor = 'var(--solid-gold)';
+            particle.style.borderRadius = '50%';
+            particle.style.top = Math.random() * 100 + 'vh';
+            particle.style.left = Math.random() * 100 + 'vw';
+            particle.style.zIndex = '9998';
+            particle.style.pointerEvents = 'none';
+            particle.style.opacity = '0.8';
+            particle.style.boxShadow = '0 0 20px var(--solid-gold)';
+            particle.style.animation = `solidFloat ${Math.random() * 5 + 3}s linear forwards`;
+            
+            document.body.appendChild(particle);
+            
+            setTimeout(() => {
+                if (particle.parentNode) {
+                    particle.remove();
+                }
+            }, 3000);
+        }
+
+        // Load wishes from Firestore
+        function loadWishes() {
+            db.collection('solid_wishes')
+                .orderBy('timestamp', 'desc')
+                .limit(15)
+                .onSnapshot((snapshot) => {
+                    wishList.innerHTML = '';
+                    
+                    if (snapshot.empty) {
+                        wishList.innerHTML = `
+                            <div class="wish-card">
+                                <div class="wish-header">
+                                    <div class="wish-sender">
+                                        <i class="fas fa-star"></i>
+                                        প্রথম বার্তা
+                                    </div>
+                                    <div class="wish-time">এখনই</div>
+                                </div>
+                                <div class="wish-text">প্রথম শুভেচ্ছাটি আপনিই দিন!</div>
+                            </div>
+                        `;
+                        return;
+                    }
+                    
+                    snapshot.forEach((doc) => {
+                        const wish = doc.data();
+                        const wishItem = document.createElement('div');
+                        wishItem.className = 'wish-card';
+                        wishItem.innerHTML = `
+                            <div class="wish-header">
+                                <div class="wish-sender">
+                                    <i class="fas fa-user"></i>
+                                    ${wish.senderName}${wish.senderTitle ? ` • ${wish.senderTitle}` : ''}
+                                </div>
+                                <div class="wish-time">${formatTimestamp(wish.timestamp)}</div>
+                            </div>
+                            <div class="wish-text">${wish.text}</div>
+                        `;
+                        wishList.appendChild(wishItem);
+                    });
+                }, (error) => {
+                    console.error('Error loading wishes:', error);
+                    wishList.innerHTML = `
+                        <div class="wish-card">
+                            <div class="wish-header">
+                                <div class="wish-sender">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    সমস্যা
+                                </div>
+                                <div class="wish-time">এখনই</div>
+                            </div>
+                            <div class="wish-text">শুভেচ্ছা লোড করতে সমস্যা হচ্ছে। দয়া করে পৃষ্ঠাটি রিফ্রেশ করুন।</div>
+                        </div>
+                    `;
+                });
+        }
+
+        // Send wish to Firestore
+        async function sendWish() {
+            const text = wishInput.value.trim();
+            const name = senderName.value.trim();
+            
+            if (!name) {
+                showToast('দয়া করে আপনার নাম লিখুন', 'error');
+                senderName.focus();
+                return;
+            }
+            
+            if (!text) {
+                showToast('দয়া করে শুভেচ্ছা বার্তা লিখুন', 'error');
+                wishInput.focus();
+                return;
+            }
+            
+            if (text.length > 800) {
+                showToast('বার্তাটি খুব দীর্ঘ। সর্বোচ্চ ৮০০ অক্ষর লিখুন।', 'error');
+                return;
+            }
+            
+            try {
+                // Show loading
+                solidLoading.style.display = 'block';
+                solidBtn.disabled = true;
+                solidBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> প্রেরণ করা হচ্ছে...';
+                
+                // Add wish to Firestore
+                await db.collection('solid_wishes').add({
+                    senderName: name,
+                    senderTitle: senderTitle.value.trim(),
+                    text: text,
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                });
+                
+                // Success
+                showToast(`ধন্যবাদ ${name}! আপনার শুভেচ্ছা সংরক্ষণ করা হয়েছে!`);
+                
+                // Reset form
+                wishInput.value = '';
+                senderName.value = '';
+                senderTitle.value = '';
+                
+                // Create golden celebration
+                for (let i = 0; i < 30; i++) {
+                    setTimeout(() => createGoldParticle(), i * 80);
+                }
+                
+                // Log event
+                analytics.logEvent('solid_wish_sent', {
+                    senderName: name,
+                    messageLength: text.length
+                });
+                
+            } catch (error) {
+                console.error('Error sending wish:', error);
+                showToast('শুভেচ্ছা প্রেরণে সমস্যা হয়েছে। আবার চেষ্টা করুন।', 'error');
+            } finally {
+                // Hide loading
+                solidLoading.style.display = 'none';
+                solidBtn.disabled = false;
+                solidBtn.innerHTML = '<i class="fas fa-paper-plane"></i> শুভেচ্ছা প্রেরণ করুন';
+            }
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load existing wishes
+            loadWishes();
+            
+            // Set up wish button
+            solidBtn.addEventListener('click', sendWish);
+            
+            // Allow sending wish with Ctrl+Enter
+            wishInput.addEventListener('keydown', (e) => {
+                if (e.ctrlKey && e.key === 'Enter') {
+                    sendWish();
+                }
+            });
+            
+            // Interactive frames
+            const solidFrame = document.querySelector('.solid-frame');
+            solidFrame.addEventListener('click', function() {
+                this.style.transform = 'perspective(1200px) rotateX(-10deg) rotateY(10deg) scale(1.1)';
+                setTimeout(() => {
+                    this.style.transform = 'perspective(1200px) rotateX(5deg) rotateY(-5deg) scale(1)';
+                }, 1500);
+                
+                // Create golden particles
+                for (let i = 0; i < 15; i++) {
+                    setTimeout(() => createGoldParticle(), i * 100);
+                }
+            });
+            
+            // Interactive card
+            const solidCard = document.querySelector('.solid-card');
+            solidCard.addEventListener('click', function() {
+                this.style.transform = 'perspective(1000px) rotateX(-10deg) rotateY(-10deg) scale(1.1)';
+                setTimeout(() => {
+                    this.style.transform = 'perspective(1000px) rotateX(5deg) rotateY(5deg) scale(1)';
+                }, 1500);
+            });
+            
+            // Add scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'cardAppear 1s ease forwards';
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe elements for animation
+            document.querySelectorAll('.solid-frame, .solid-card, .solid-message-container, .solid-wish-container, .wish-card').forEach(el => {
+                observer.observe(el);
+            });
+            
+            // Log page view
+            analytics.logEvent('solid_page_view', {
+                page_title: 'Lamisha Lamiya Solid Luxury Birthday',
+                page_location: window.location.href
+            });
+        });
+    </script>
+</body>
+</html>
